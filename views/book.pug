@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1= title
-  - let results=[{book_name:"Borosilicate",year_published:2,author:"Thermal resistance"},{book_name:"Pyrex",year_published :5,author:"Heat resistance"},{book_name:"Asbestos",year_published:3,author:"cold resistance"}]
+  - let results=[{book_name:"Revolution 2020",year_published:2011,author:"Chetan Bhagat"},{book_name:"Wings of fire",year_published :2012,author:"Tui T. Sutherland"},{book_name:"Quiet",year_published:2012,author:"Susan Cain"}]
   div(class="container-fluid")
   div(class="row")
   each value,index in results
