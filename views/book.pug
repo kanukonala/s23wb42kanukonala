@@ -2,4 +2,13 @@ extends layout
 
 block content
   h1= title
-  
+  - let results=[{book_name:"Borosilicate",year_published:2,author:"Thermal resistance"},{book_name:"Pyrex",year_published :5,author:"Heat resistance"},{book_name:"Asbestos",year_published:3,author:"cold resistance"}]
+  div(class="container-fluid")
+  div(class="row")
+  each value,index in results
+    div(class="col-sm-2" onclick=`buy(${index})`)  #{value.book_name} book, year_published is #{value.year_published}, with #{value.author}
+  script. 
+    function buy(index)
+    {
+      alert(`You purchased Item ${index+1}`)
+    } 
